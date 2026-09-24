@@ -36,17 +36,10 @@ class EndTransactionCommand(ICommand):
         self.obj = self.obj.journal
 
 
-class TransactionRow:
-    def __init__(self, id, abort, commit):
-        self.id = id
-        self.abort = abort
-        self.commit = commit
-
+class TransactionJournal:
+    def __init__(self):
+        self.journal = {}
 
 class TransactionManager:
-    def __init__(self, table):
-        self.table = 
-
-    def row(self, id, status):
-        
-
+    def __init__(self):
+        self.trans = {}
